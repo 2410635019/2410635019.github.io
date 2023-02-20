@@ -1,0 +1,207 @@
+
+/* 
+* 星号是通配符 意思是所有元素都具有的属性
+总结:
+    先整体页面使用vh 也就是视窗百分比大小  容器也是vh  铺满视窗
+    图片就是overflow  裁剪  卡片div使用flex布局
+
+
+*/
+
+* {
+    /* 所有外边距为0  */
+    margin: 0;
+    /* 所有内边距为0 */
+    padding: 0;
+    /* 待 */
+    box-sizing: border-box;
+    /* 字体样式  如果第一个没有就使用后面的*/
+    font-family: "Poppins", sans-serif;
+}
+
+
+body {
+    /*  vh是单位  相对于视窗的单位
+    也就是视窗高度的100% 1vh就是视窗高度的百分之1 
+    相对的还有vw就是视窗宽度*/
+    min-height: 100vh;
+    background: #506266;
+}
+
+
+/* 容器 */
+.container {
+    /* 最小高度为视窗高度的100% 也就是和视窗一样高 */
+    min-height: 100vh;
+    display: flex;
+    /* 容器水平居中对齐 */
+    justify-content: center;
+    /* 容器垂直居中对齐 */
+    align-items: center;
+    /* 容器里面的项目换行方式   换行在第一行下放
+    待  搞懂
+    */
+    flex-wrap: wrap;
+
+}
+
+/* 卡片 */
+
+.card {
+    /* 绝对定位的模式  相对其他正常元素的定位*/
+    position: relative;
+    background: #fff;
+    /* 最大宽度为 */
+    max-width: 35vh;
+    width:35vh;
+    /* 卡片div的上下左右外边距都是20px */
+    margin: 20px;
+    /* 圆角边框 */
+    border-radius: 5px;
+    /* 阴影    后面百分比是阴影程度*/
+    box-shadow: 0 5px 25px rgb(1 1 1 / 90%);
+
+}
+
+
+
+/* 图片 */
+.card_img {
+    max-width: 35vh;
+    max-height:  50vh;
+    /* 当前内容溢出边框时显示的样式  hidden内容会被裁剪 并且裁剪的内容不可见 */
+    overflow: hidden;
+    /* border-radius: 40px; */
+    display: flex;
+    justify-content: center;
+    /* justify-items: center; */
+
+
+}
+
+/* 后代选择器  也就是选择二card_img  HTML的子元素  img  */
+.card_img img {
+    max-width: 100%;
+    /* height: auto; */
+    max-height: 100%;
+    width: 150px;
+    height:150px;
+    /* 元素是否可见   hidden不可见   骨架*/
+    /* visibility: hidden; */
+    border-radius: 50%;
+    margin: 35px 0;
+    /* align-items: center; */
+
+}
+
+
+
+
+
+/* 卡片信息 */
+.card_info {
+    /* 待 */
+    position: relative;
+    color: #222;
+    /* 所有内边距为20px */
+    padding: 20px;
+}
+
+
+.card_info h3 {
+    /* 文本大小*/
+    font-size: 1.4em;
+    /* 字体粗细 */
+    font-weight: 700;
+    /* 下边距*/
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.card_info p {
+    font-size: 1em;
+    /* 下边距 */
+    margin-bottom: 15px;
+}
+
+/* 后代选择器  只不过是class  选择的是社交媒体图案 */
+.card_info .card_meida {
+    position: relative;
+    display: flex;
+    /*  容器下的项目水平对齐 */
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.card_info .card_meida a {
+    color: #999;
+    font-size: 1.4em;
+    /* 简写  上下外边距为0  左右外边距为10px */
+    margin: 0 10px;
+    background: #eee;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    /* 容器内容水平居中 */
+    justify-content: center;
+    /* 容器的项目垂直居中 */
+    align-items: center;
+    /* 待 */
+    text-decoration: none;
+    border-radius: 50%;
+    /* 待 */
+    transition: color  0.3s ease;
+
+}
+
+/* 伪类  a链接样式 */
+.card_info .card_meida a:hover {
+        color: #2222;
+
+}
+
+
+/* 骨架####### */
+/* .loading {
+    position: relative;
+    background: #e2e2e2;
+    /* 溢出样式 剪裁不显示*/
+    /* overflow: hidden; */
+/* } */ */
+
+
+/* 骨架######### */
+/* 伪类 之前加东西 */
+/* .loading:before { */
+    /* content: ''; */
+    /* 绝对定位 */
+    /* position: absolute; */
+    /* width: 100%; */
+    /* height: 100%; */
+    /* 待 */
+    /* background: linear-gradient(90deg, transpare, rgb(255,255,255), transpare);
+    transform: translateX(-100%);
+    animation: loading 1.5s infinite; */
+
+/* } */
+
+/* 待 */
+/* @keyframes loading {
+    100% {
+        transform: translateX(100%);
+    }
+} */
+
+
+
+
+
+
+
+
+
+
+
+
