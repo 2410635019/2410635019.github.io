@@ -17,6 +17,7 @@
     box-sizing: border-box;
     /* 字体样式  如果第一个没有就使用后面的*/
     font-family: "Poppins", sans-serif;
+
 }
 
 
@@ -25,7 +26,16 @@ body {
     也就是视窗高度的100% 1vh就是视窗高度的百分之1 
     相对的还有vw就是视窗宽度*/
     min-height: 100vh;
-    background: #506266;
+    /* background: url(img/4.png); */
+    /* background: url(img/2.png) no-repeat; */
+    /* background: url(img/18.png) no-repeat; */
+    background: #5a1216;
+    background: #f0a1a8;
+    background: #7a7374;
+
+
+
+    background-size: 100%;
 }
 
 
@@ -62,6 +72,41 @@ body {
     box-shadow: 0 5px 25px rgb(1 1 1 / 90%);
 
 }
+
+
+
+/* 打字机 */
+.text{
+    font-family: 'fangsong';
+    display: inline-block;
+  position: relative;
+  font-size: 4px;
+  height: 10px;
+  line-height: 60px;
+  color: rgb(29, 27, 27);
+  text-align: center;
+}
+.text::after{
+    content: '';
+    position: absolute;
+    right: -10px;
+    top: 20px;
+    height: 22px;
+    width: 3px;     
+    background-color: #010000;
+    animation: san 0.5s steps(1) infinite;
+}
+@keyframes san{
+    0%,100%{
+        background-color: #000000;
+    }
+    50%{
+       background-color: transparent;
+    }
+
+}
+/* 打字机 */
+
 
 
 
